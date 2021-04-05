@@ -68,7 +68,6 @@ public class HospitalSetController {
         return Result.ok(hospitalSetPage);
     }
 
-
     @ApiOperation(value = "添加医院设置")
     @PostMapping("saveHospitalSet")
     public Result findPageHospSet(@RequestBody HospitalSet hospitalSet) {
@@ -85,22 +84,17 @@ public class HospitalSetController {
             return Result.fail();
     }
 
-
     @ApiOperation(value = "根据id查询医院设置")
     @GetMapping("getHospSet/{id}")
     public Result getHospSet(@PathVariable Long id) {
-
-        try {
+        /*try {
             int a = 1 / 0;
         } catch (Exception ex){
             throw new YyghException("除0异常", 100);
-        }
-
-
+        }*/
         HospitalSet hospitalSet = hospitalSetService.getById(id);
         return Result.ok(hospitalSet);
     }
-
 
     @ApiOperation(value = "根据id更改医院设置")
     @PostMapping("updateHospitalSet")
@@ -138,7 +132,8 @@ public class HospitalSetController {
             return Result.fail();
     }
 
-    @ApiOperation(value = "医院设置锁定和解锁")
+
+    @ApiOperation(value = "发送签名key",notes = "医院信息配置后,可以通过短信的形式发送医院编号与签名key给联系人,联系人拿到该信息就可以参考《尚医通API接口文档.docx》对接接口了。")
     @PutMapping("sendId/{id}")
     public Result sendId(@PathVariable Long id) {
         HospitalSet hospitalSet = hospitalSetService.getById(id);
