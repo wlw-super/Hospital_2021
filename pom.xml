@@ -7,6 +7,7 @@
         <module>model</module>
         <module>service</module>
         <module>service/service_user</module>
+        <module>service/service_hospital</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
