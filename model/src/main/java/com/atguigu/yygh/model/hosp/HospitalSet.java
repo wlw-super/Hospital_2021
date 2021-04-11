@@ -9,10 +9,12 @@ import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 
-@ApiModel(value = "医院设置")
+@ApiModel(description = "医院设置")
 @Data
 @TableName(value = "hospital_set")
 public class HospitalSet extends BaseEntity {
+
+    private static final long serialVersionUID = 1L;
 
     @ApiModelProperty(value = "医院名称")
     @TableField(value = "hosname")
