@@ -31,3 +31,8 @@ build/
 
 ### VS Code ###
 .vscode/
+/hospital-manager/mvnw.cmd
+/hospital-manager/pom.xml
+/hospital-manager/mvnw.cmd
+/hospital-manager/mvnw
+!/.gitignore
